@@ -7,7 +7,10 @@
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 <body>
+
 <div id="container">
+    <div id="alertNote">Try again</div>
+    <div id="testResult"> score:<span id="score">0</span></div>
     <div    id="question">
 
 
@@ -23,57 +26,18 @@
 
     </div>
     <div class="clearLine"></div>
-    <div id="results">
-        <button id="commandButton" onclick="startGame()"> Start Game </button>
-        <div id="testResult"> 0</div>
-    </div>
+
+    <div id="commandButton" onclick="startGame()"> Start Game </div>
+
+    <div id="gameOver"></div>
+
+
 
 </div>
 
 
 
-<script type="text/javascript">
-    var gameFlag=true
-    function startGame() {
-        if (document.getElementById('commandButton').innerHTML=='Start Game'){
-            document.getElementById('commandButton').innerHTML='restart game'
-
-
-            timer=setTimeout(function () {gameFlag=false},11000)
-            t=setInterval(function () {timeShow()},1000)
-            for (conter=1;conter<5;conter++){
-                // var num1=math.floor(math.random()*10)
-                // var num2=math.floor(math.random()*10)
-                // question=num1*num2
-                var falseAnswer1=Math.floor(Math.random()*100)
-                var falseAnswer2=Math.floor(Math.random()*100)
-                var falseAnswer3=Math.floor(Math.random()*100)
-
-                document.getElementById('answer1').innerHTML=falseAnswer1
-                document.getElementById('answer2').innerHTML=falseAnswer2
-                document.getElementById('answer3').innerHTML=falseAnswer3
-
-            }
-
-
-        }
-        else {
-            document.getElementById('commandButton').innerHTML='Start Game'
-        }
-
-
-    }
-    var i=0
-    function timeShow() {
-        i+=1
-        document.getElementById('testResult').innerHTML=i
-        if (gameFlag==false){
-            clearInterval(t)
-        }
-
-    }
-
-
+<script type="text/javascript" src="javascriptMathGame.js">
 
 </script>
 </body>

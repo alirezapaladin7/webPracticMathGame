@@ -1,3 +1,6 @@
+html{
+    background: radial-gradient(circle, #d0c6c6 5%, #cdc1c1);
+}
 .clearLine{
     clear: both;
 }
@@ -8,18 +11,20 @@
     background-color: #3fd5ff;
     border-radius: 30px;
     padding-top: 30px;
+    position: relative;
 
 }
 #question{
     font-size: 44px;
-    font-family: Verdana;
+    font-family: Verdana, serif;
     width: 500px;
     height: 220px;
-    margin: 0px auto;
+    margin: 0 auto;
     background-color: #a76eff;
     box-shadow: darkblue 6px 6px;
 }
 #noteBox{
+    line-height: 55px;
     width: 500px;
     height: 60px;
     background-color:#c1b0ff ;
@@ -28,7 +33,7 @@
 }
 #noteBox p{
     text-align: center;
-    font-family: Verdana;
+    font-family: Verdana, serif;
     font-size: 20px;
     font-weight: bold;
     /*margin-top: 40px;*/
@@ -41,25 +46,69 @@
 }
 
 .answers{
+    line-height: 88px;
+    text-align: center;
+    cursor: pointer;
     float: left;
     width: 100px;
     height: 100px;
     border-radius: 10px;
     background-color:antiquewhite ;
     margin: 20px 12px;
+    box-shadow:  0px 6px 0px grey;
+    position: relative;
+    transition: top .5s;
+}
+.answers:active , #commandButton:active{
+    top: 6px;
+    box-shadow: none;
+    background-color: #bebbc1;
+    font-size: 1.3em;
+
+
 }
 #commandButton{
+    cursor: pointer;
     width: 120px;
-    height: 44px;
+    padding: 16px;
     background-color: cornflowerblue;
     /*margin-top: 50px;*/
-    align-self: center;
+    margin: 20px auto;
+    text-align: center;
+    box-shadow:  0px 6px 0px grey;
+    position: relative;
+
 
 }
 #testResult{
-    width: 120px;
-    height: 44px;
+    width: 60px;
+    padding: 14px;
+    /*height: 44px;*/
     background-color: darkorange;
-    float: right;
-
+    position: relative;
+    left: 685px;
+    top: -10px;
+    text-align: center;
+}
+#alertNote{
+    font-size: 20px;
+    padding: 14px;
+    width: 120px;
+    background-color: #c43001;
+    color:aliceblue;
+    position: absolute;
+    left: 333px;
+    top: 14px;
+    text-align: center;
+}
+#gameOver{
+    width:700px;
+    height: 320px;
+    background: linear-gradient(gold, #c43001);
+    position: relative;
+    top: -500px;
+    left: 5px;
+    margin: 10px auto;
+    display: none;
+    z-index: 9;
 }
