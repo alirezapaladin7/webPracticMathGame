@@ -15,7 +15,9 @@ html{
 
 }
 #question{
-    font-size: 44px;
+    text-align: center;
+    line-height: 220px;
+    font-size: 50px;
     font-family: Verdana, serif;
     width: 500px;
     height: 220px;
@@ -80,13 +82,13 @@ html{
 
 
 }
-#testResult{
-    width: 60px;
+#timerBox{
+    width: 110px;
     padding: 14px;
     /*height: 44px;*/
     background-color: darkorange;
     position: relative;
-    left: 685px;
+    left: 650px;
     top: -10px;
     text-align: center;
 }
@@ -100,6 +102,18 @@ html{
     left: 333px;
     top: 14px;
     text-align: center;
+    display: none;
+}
+#scoreBox{
+    width: 110px;
+    padding: 14px;
+    /*height: 44px;*/
+    background-color: #89bf32;
+    position: absolute;
+    left: 650px;
+    top: 550px;
+    text-align: center;
+
 }
 #gameOver{
     width:700px;
