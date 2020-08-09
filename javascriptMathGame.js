@@ -37,13 +37,17 @@ function randomAnswer() {
     }
     var choiser=Math.floor(Math.random()*4)
 
+    for (var i=0;i<4;i++) {
+        if (choiser==i) {
+            document.getElementById(('answer'+(i+1))).innerHTML = quesAnswer[i][2]
+        }else if( quesAnswer[choiser][2] != quesAnswer[i][2]){
+            document.getElementById(('answer'+(i+1))).innerHTML = quesAnswer[i][2]
+        }else {
+            document.getElementById(('answer'+(i+1))).innerHTML = quesAnswer[i][2]+Math.floor(Math.random()*10)
 
+        }
 
-     document.getElementById('answer1').innerHTML=quesAnswer[0][2]
-     document.getElementById('answer2').innerHTML=quesAnswer[1][2]
-     document.getElementById('answer3').innerHTML=quesAnswer[2][2]
-     document.getElementById('answer4').innerHTML=quesAnswer[3][2]
-
+    }
     document.getElementById('question').innerHTML=quesAnswer[choiser][0]+' x '+quesAnswer[choiser][1]
     return choiser
 }
