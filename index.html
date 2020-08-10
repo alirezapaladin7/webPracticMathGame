@@ -10,7 +10,7 @@
 
 <div id="container">
     <div id="alertNote">Try again</div>
-    <div id="timerBox"> time remain :<span id="timeRemain">0</span></div>
+    <div id="timerBox"> time remain :<span id="timeRemain"></span></div>
     <div    id="question">
 
 
@@ -19,18 +19,18 @@
         <p> click on right answer.</p>
     </div>
     <div id="answerArea">
-        <div id="answer1" class="answers"></div>
-        <div id="answer2" class="answers"></div>
-        <div id="answer3" class="answers"></div>
-        <div id="answer4" class="answers"></div>
+        <div id="answer1" class="answers" onclick="answerChoise()"></div>
+        <div id="answer2" class="answers" onclick="answerChoise()"></div>
+        <div id="answer3" class="answers" onclick="answerChoise()"></div>
+        <div id="answer4" class="answers" onclick="answerChoise()"></div>
 
     </div>
     <div class="clearLine"></div>
 
     <div id="commandButton" onclick="startGame()"> Start Game </div>
-    <div id="scoreBox">You current score:<span id="score">0</span></div>
+    <div id="scoreBox">You current score:<span id="scoreUnder">0</span></div>
 
-    <div id="gameOver"></div>
+    <div id="gameOver">'GAME OVER & Your score is '<br><span id="scoreGameover"></span></div>
 
 
 
